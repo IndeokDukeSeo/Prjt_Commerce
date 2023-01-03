@@ -1,0 +1,17 @@
+public static ClientResponse SendSimpleMessage() {
+	Client client = Client.create();
+	client.addFilter(new HTTPBasicAuthFilter("api", "0236c1d51e3e45dae203c1578b1dfa06-c2efc90c-c88cb68b"));
+	WebResource webResource = client.resource("https://api.mailgun.net/v3/sandboxf13c27ff7f744adbbf5a068afb4fe497.mailgun.org/messages");
+	MultivaluedMapImpl formData = new MultivaluedMapImpl();
+	formData.add("from", "Mailgun Sandbox <postmaster@sandboxf13c27ff7f744adbbf5a068afb4fe497.mailgun.org>");
+	formData.add("to", "Indeok <dukeindream@gmail.com>");
+	formData.add("subject", "Hello Indeok");
+	formData.add("text", "Congratulations Indeok, you just sent an email with Mailgun!  You are truly awesome!");
+	return webResource.type(MediaType.APPLICATION_FORM_URLENCODED).
+		post(ClientResponse.class, formData);
+}
+
+// You can see a record of this email in your logs: https://app.mailgun.com/app/logs.
+
+// You can send up to 300 emails/day from this sandbox server.
+// Next, you should add your own domain so you can send 10000 emails/month for free.
