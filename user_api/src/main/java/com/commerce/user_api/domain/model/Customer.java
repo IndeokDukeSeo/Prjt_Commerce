@@ -1,6 +1,6 @@
-package com.commerce.user_api.client.domain.model;
+package com.commerce.user_api.domain.model;
 
-import com.commerce.user_api.client.domain.SignUpForm;
+import com.commerce.user_api.domain.SignUpForm;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 
@@ -16,6 +16,7 @@ import java.util.Locale;
 
 @Entity
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

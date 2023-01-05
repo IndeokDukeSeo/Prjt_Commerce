@@ -1,4 +1,4 @@
-package com.commerce.user_api.client.domain;
+package com.commerce.user_api.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

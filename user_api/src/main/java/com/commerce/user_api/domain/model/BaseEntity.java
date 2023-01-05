@@ -1,4 +1,4 @@
-package com.commerce.user_api.client.domain.model;
+package com.commerce.user_api.domain.model;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
