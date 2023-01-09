@@ -1,0 +1,45 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1990-08-17",
+  "email": "duketest@gmail.com",
+  "name": "이름",
+  "password": "pw",
+  "phone": "000-0001-1234"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=duketest@gmail.com&code=ehX3pZMHW3
+
+### 로그인(고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "duketest@gmail.com",
+  "password": "pw"
+}
+
+### 회원정보 조회 (고객)
+#eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzMyNTM2NDQsImV4cCI6MTY3MzM0MDA0NH0.DQRasKqmouxhAo3ABzYsarE-r_s04Q2cqEGFAov5J78
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzMyNTM2NDQsImV4cCI6MTY3MzM0MDA0NH0.DQRasKqmouxhAo3ABzYsarE-r_s04Q2cqEGFAov5J78
+
+### 잔액변경 (고객)
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IlN1YkhlS1VSUnJlUVkrV1NPbkJrdGc9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzMyNTM2NDQsImV4cCI6MTY3MzM0MDA0NH0.DQRasKqmouxhAo3ABzYsarE-r_s04Q2cqEGFAov5J78
+
+{
+  "from": "duketest@gmail.com",
+  "message": "돈 충전",
+  "money": -50000
+}
+
+
+##########################################
+### 회원가입 (셀러)
+### 로그인(셀러)
