@@ -1,2 +1,1 @@
 rootProject.name = 'user_api'
-include 'commerce-domain'
