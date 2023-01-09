@@ -2,6 +2,7 @@ package com.commerce.user_api.service;
 
 import com.commerce.user_api.domain.SignUpForm;
 import com.commerce.user_api.domain.model.Customer;
+import com.commerce.user_api.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

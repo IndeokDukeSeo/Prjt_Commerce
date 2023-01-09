@@ -1,4 +1,4 @@
-package com.commerce.user_api.service;
+package com.commerce.user_api.service.customer;
 
 import com.commerce.user_api.domain.model.Customer;
 import com.commerce.user_api.domain.repository.CustomerRepository;
