@@ -1,6 +1,7 @@
 package com.commerce.user_api.controller;
 
 import com.commerce.user_api.application.SignInApplication;
+import com.commerce.user_api.domain.SignInForm;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,11 @@ public class SignInController {
     @PostMapping("/customer")
     public ResponseEntity<String> signInCustomer(@RequestBody SignInForm form) {
         return ResponseEntity.ok(signInApplication.customerLogInToken(form));
+    }
 
+    @PostMapping("/seller")
+    public ResponseEntity<String> signInSeller(@RequestBody SignInForm form) {
+        return ResponseEntity.ok(signInApplication.sellerLogInToken(form));
     }
 
 

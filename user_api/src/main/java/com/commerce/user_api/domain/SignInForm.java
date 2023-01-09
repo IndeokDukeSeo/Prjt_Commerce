@@ -1,4 +1,4 @@
-package com.commerce.user_api.controller;
+package com.commerce.user_api.domain;
 
 import lombok.Getter;
 
