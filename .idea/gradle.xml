@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/commerce-domain" />
+            <option value="$PROJECT_DIR$/order_api" />
             <option value="$PROJECT_DIR$/user_api" />
           </set>
         </option>
