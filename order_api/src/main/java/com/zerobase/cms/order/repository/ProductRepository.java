@@ -8,6 +8,7 @@ import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product,Long> {
 
+    @EntityGraph(attributePaths = {"productItems"}, type = EntityGraph.EntityGraphType.LOAD)
     Optional<Product> findBySellerIdAndId(Long sellerId, Long Id);
 
     @EntityGraph(attributePaths = {"productItems"}, type = EntityGraph.EntityGraphType.LOAD)

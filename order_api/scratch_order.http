@@ -4,25 +4,56 @@ Content-Type: application/json
 X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
 
 {
-  "description": "상품설명",
+  "description": "상품설명생성",
   "items": [
     {
-      "count": 10,
-      "name": "270",
-      "price": 10000
+      "count": 1,
+      "name": "260",
+      "price": 1
     }
   ],
-  "name": "나이키2232"
+  "name": "나이키생성"
 }
 
-### 상품 아이템 추
+### 상품 아이템 추가
 POST http://localhost:8082/seller/product/item
 Content-Type: application/json
 X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
 
 {
-      "productId": 1,
-      "count": 10,
-      "name": "275",
-      "price": 10001
+  "productId": 1,
+  "count": 10,
+  "name": "275",
+  "price": 10001
+}
+
+### 상품수정
+PUT http://localhost:8082/seller/product
+Content-Type: application/json
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+
+{
+  "description": "상품설명수정",
+  "items": [
+    {
+      "id": 1,
+      "count": 100,
+      "name": "280",
+      "price": 10
+    }
+  ],
+  "id" : 1,
+  "name": "나이키 수정"
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+
+{
+  "id": 3,
+  "count": 1020,
+  "name": "아이템수정",
+  "price": 2
 }

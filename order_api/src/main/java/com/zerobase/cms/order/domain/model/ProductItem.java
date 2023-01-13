@@ -26,6 +26,7 @@ public class ProductItem extends BaseEntity{
     private String name;
     @Audited
     private Integer price;
+
     private Integer count;
 
 
