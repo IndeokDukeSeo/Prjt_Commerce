@@ -1,0 +1,28 @@
+### 상품추가 (셀러)
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+
+{
+  "description": "상품설명",
+  "items": [
+    {
+      "count": 10,
+      "name": "270",
+      "price": 10000
+    }
+  ],
+  "name": "나이키2232"
+}
+
+### 상품 아이템 추
+POST http://localhost:8082/seller/product/item
+Content-Type: application/json
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+
+{
+      "productId": 1,
+      "count": 10,
+      "name": "275",
+      "price": 10001
+}

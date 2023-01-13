@@ -42,4 +42,25 @@ X-AUTH-TOKEN:eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYn
 
 ##########################################
 ### 회원가입 (셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1990-08-17",
+  "email": "duketest@gmail.com",
+  "name": "이름",
+  "password": "pw",
+  "phone": "000-0001-1234"
+}
+
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/seller/verify?email=duketest@gmail.com&code=hZ03j0tCn4
+
 ### 로그인(셀러)
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "duketest@gmail.com",
+  "password": "pw"
+}
