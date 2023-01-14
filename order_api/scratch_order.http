@@ -33,6 +33,38 @@ Content-Type: application/json
 X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
 
 {
+  "id" : 1,
+  "name": "나이키 수정3",
+  "description": "상품설명수정3",
+  "items": [
+    {
+      "id": 2,
+      "count": 100,
+      "name": "280",
+      "price": 10
+    }
+  ]
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+
+{
+  "id": 2,
+  "count": 1020,
+  "name": "아이템수정",
+  "price": 2
+}
+
+
+### 상품삭제
+DELETE http://localhost:8082/seller/product?id=1
+Content-Type: application/json
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+
+{
   "description": "상품설명수정",
   "items": [
     {
@@ -46,14 +78,12 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
   "name": "나이키 수정"
 }
 
-### 상품 아이템 수정
-PUT http://localhost:8082/seller/product/item
+### 상품 아이템 삭제
+DELETE http://localhost:8082/seller/product/item?id=2
 Content-Type: application/json
 X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
 
 {
-  "id": 3,
-  "count": 1020,
-  "name": "아이템수정",
-  "price": 2
+  "id": 2,
 }
+
