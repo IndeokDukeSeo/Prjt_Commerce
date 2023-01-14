@@ -1,7 +1,8 @@
 ### 상품추가 (셀러)
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjk2ODM5LCJleHAiOjE2NzM3ODMyMzl9.nRk_3Ii8u2Y51BhDxU8VlLY3cYgrVrMkL8FVZO806uw
+
 
 {
   "description": "상품설명생성",
@@ -12,13 +13,13 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
       "price": 1
     }
   ],
-  "name": "나이키생성"
+  "name": "nike"
 }
 
 ### 상품 아이템 추가
 POST http://localhost:8082/seller/product/item
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjk2ODM5LCJleHAiOjE2NzM3ODMyMzl9.nRk_3Ii8u2Y51BhDxU8VlLY3cYgrVrMkL8FVZO806uw
 
 {
   "productId": 1,
@@ -30,7 +31,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품수정
 PUT http://localhost:8082/seller/product
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjk2ODM5LCJleHAiOjE2NzM3ODMyMzl9.nRk_3Ii8u2Y51BhDxU8VlLY3cYgrVrMkL8FVZO806uw
 
 {
   "id" : 1,
@@ -38,7 +39,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
   "description": "상품설명수정3",
   "items": [
     {
-      "id": 2,
+      "id": 1,
       "count": 100,
       "name": "280",
       "price": 10
@@ -49,7 +50,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품 아이템 수정
 PUT http://localhost:8082/seller/product/item
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjk2ODM5LCJleHAiOjE2NzM3ODMyMzl9.nRk_3Ii8u2Y51BhDxU8VlLY3cYgrVrMkL8FVZO806uw
 
 {
   "id": 2,
@@ -62,7 +63,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품삭제
 DELETE http://localhost:8082/seller/product?id=1
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjk2ODM5LCJleHAiOjE2NzM3ODMyMzl9.nRk_3Ii8u2Y51BhDxU8VlLY3cYgrVrMkL8FVZO806uw
 
 {
   "description": "상품설명수정",
@@ -81,9 +82,16 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품 아이템 삭제
 DELETE http://localhost:8082/seller/product/item?id=2
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjEwMjI5LCJleHAiOjE2NzM2OTY2Mjl9.lLp8bIGN_DPNnAcIpDJMjvenKuV5_fj8LQYSm05VsZQ
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczNjk2ODM5LCJleHAiOjE2NzM3ODMyMzl9.nRk_3Ii8u2Y51BhDxU8VlLY3cYgrVrMkL8FVZO806uw
 
 {
-  "id": 2,
+  "id": 2
 }
 
+### 상품 아이템 검색
+GET http://localhost:8082/search/product?name=nike
+Content-Type: application/json
+
+### 상품 디테일 검색
+GET http://localhost:8082/search/product/detail?productId=1
+Content-Type: application/json
