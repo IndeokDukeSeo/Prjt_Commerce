@@ -60,7 +60,7 @@ public class CartService {
                     redisProduct.getItems().add(item);
 
                 } else {
-                    if (redisItem.getPrice().equals(item.getPrice())) {
+                    if (!redisItem.getPrice().equals(item.getPrice())) {
                         cart.addMessage(redisProduct.getName() + item.getName() + "의 가격이 변경되었습니다. 확인부탁드립니다.");
                     }
                     redisItem.setCount(redisItem.getCount() + item.getCount());

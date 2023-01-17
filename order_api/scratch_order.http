@@ -1,17 +1,15 @@
 ### 상품추가 (셀러)
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
-
-
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 {
   "description": "상품설명생성",
   "items": [
     {
-      "count": 1,
+      "count": 100,
       "name": "260",
-      "price": 1
+      "price": 100
     }
   ],
   "name": "나이키"
@@ -20,12 +18,12 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품 아이템 추가
 POST http://localhost:8082/seller/product/item
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 
 {
-  "productId": 1,
-  "count": 10,
+  "productId": 3,
+  "count": 100,
   "name": "275",
   "price": 10001
 }
@@ -33,7 +31,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품수정
 PUT http://localhost:8082/seller/product
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 
 {
@@ -53,7 +51,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품 아이템 수정
 PUT http://localhost:8082/seller/product/item
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 
 {
@@ -63,11 +61,10 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
   "price": 2
 }
 
-
 ### 상품삭제
 DELETE http://localhost:8082/seller/product?id=1
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 
 {
@@ -87,7 +84,7 @@ X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCY
 ### 상품 아이템 삭제
 DELETE http://localhost:8082/seller/product/item?id=2
 Content-Type: application/json
-X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
+X_AUTH_TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 
 {
@@ -106,19 +103,51 @@ Content-Type: application/json
 ### 카트추가
 POST http://localhost:8082/customer/cart
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjczODEwNzA1LCJleHAiOjE2NzM4OTcxMDV9.ejHFu1CA0Le_pbdA4_GULqvno1D26ZOcAfJMk1VU5qo
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
 
 {
   "description": "상품설명생성",
-  "id": 3,
+  "id": 9,
   "items": [
     {
       "count": 1,
-      "id": 3,
+      "id": 10,
       "name": "260",
-      "price": 1
+      "price": 100
     }
   ],
   "name": "나이키",
   "sellerId": 1
+}
+
+
+### 카트 조회
+GET http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
+
+### 카트 주문
+POST http://localhost:8082/customer/cart/order
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJFZkRyRDR4Mm9BRXpvTzNsbW1sWHlQUUpCYnplMmxoZlRUbEJSVFF4UytFPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2NzM5NDM4OTcsImV4cCI6MTY3NDAzMDI5N30.OwUOWuOmHJ7QOGA9SPjXmSOhZK3nPGd7nQnZktJFeyo
+
+{
+  "customerId": 1,
+  "products": [
+    {
+      "id": 9,
+      "sellerId": 1,
+      "name": "나이키",
+      "description": "상품설명생성",
+      "items": [
+        {
+          "id": 10,
+          "name": "260",
+          "count": 1,
+          "price": 100
+        }
+      ]
+    }
+  ],
+  "messages": []
 }

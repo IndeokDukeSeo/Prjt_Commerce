@@ -1,6 +1,7 @@
 package com.zerobase.cms.order.controller;
 
 import com.zerobase.cms.order.application.CartApplication;
+import com.zerobase.cms.order.application.OrderApplication;
 import com.zerobase.cms.order.domain.product.AddProductCartForm;
 import com.zerobase.cms.order.domain.redis.Cart;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
@@ -16,6 +17,7 @@ public class CustomerCartController {
     //Temporary
     private final CartApplication cartApplication;
     private final JwtAuthenticationProvider provider;
+    private final OrderApplication orderApplication;
 
 
     @PostMapping
@@ -35,7 +37,16 @@ public class CustomerCartController {
     public ResponseEntity<Cart> updateCart(
             @RequestHeader(name = "X-AUTH-TOKEN") String token,
             @RequestBody Cart cart) {
-        return ResponseEntity.ok(cartApplication.updateCart(provider.getUserVo(token).getId(),cart));
+        return ResponseEntity.ok(cartApplication.updateCart(provider.getUserVo(token).getId(), cart));
 
     }
+
+    @PostMapping("/order")
+    public ResponseEntity<Cart> order(
+            @RequestHeader(name = "X-AUTH-TOKEN") String token,
+            @RequestBody Cart cart) {
+        orderApplication.order(token, cart);
+        return ResponseEntity.ok().build();
+    }
+
 }

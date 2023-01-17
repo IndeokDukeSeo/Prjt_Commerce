@@ -32,7 +32,7 @@ public class CartApplication {
         }
 
         Cart cart = cartService.getCart(customerId);
-        if (cart != null && !addAble(cart, product, form)) {
+        if (!addAble(cart, product, form)) {
             throw new CustomException(ErrorCode.ITEM_COUNT_NOT_ENOUGH);
 
         }
@@ -53,12 +53,14 @@ public class CartApplication {
     //2.상품의 가격이나 수량이 변동된다.
     public Cart getCart(Long customerId) {
         Cart cart = refreshCart(cartService.getCart(customerId));
+        cartService.putCart(cart.getCustomerId(), cart);
+
         Cart returnCart = new Cart();
         returnCart.setCustomerId(customerId);
         returnCart.setProducts(cart.getProducts());
         returnCart.setMessages(cart.getMessages());
         returnCart.setMessages(new ArrayList<>());
-        cartService.putCart(customerId, cart);
+//        cartService.putCart(customerId, cart);
         return returnCart;
         //2. 메세지를 보고 난 다음에는, 이미 본 메세지는 스팸이 되기 떄문에 제거한다.
     }
@@ -67,7 +69,8 @@ public class CartApplication {
         cartService.putCart(customerId,null);
     }
 
-    private Cart refreshCart(Cart cart) {
+
+    protected Cart refreshCart(Cart cart) {
         //1. 상품이나 상품의 아이템의 정보,가격,수량이 변경되었는지 확인한다.
         // 그에 맞는 알람을 제공한다.
         //2. 상품 수량, 가격을 우리가 임의로 변경한다.
@@ -90,9 +93,9 @@ public class CartApplication {
                     .collect(Collectors.toMap(ProductItem::getId, productItem -> productItem));
 
 
-            //아이템 1,2,3
+            //아이템 1,2,3... 에 대하여
             List<String> tmpMessages = new ArrayList<>();
-            for (int j = 0; j < cartProduct.getItems().size(); i++) {
+            for (int j = 0; j < cartProduct.getItems().size(); j++) {
                 Cart.ProductItem cartProductItem = cartProduct.getItems().get(j);
                 ProductItem pi = productItemMap.get(cartProductItem.getId());
                 if (pi == null) {
@@ -121,7 +124,6 @@ public class CartApplication {
 
                 } else if (isCountNotEnough) {
                     tmpMessages.add(cartProductItem.getName() + "수량이 변경되었습니다.");
-
                 }
             }
             //상품 아이템이 모두 삭제되었을경우
@@ -140,7 +142,6 @@ public class CartApplication {
                 cart.addMessage(builder.toString());
             }
         }
-        cartService.putCart(cart.getCustomerId(), cart);
         return cart;
     }
 
